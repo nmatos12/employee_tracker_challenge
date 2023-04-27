@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 
+
 const promptUser = () => {
     inquirer
         .prompt([
@@ -7,34 +8,43 @@ const promptUser = () => {
                 type: 'list',
                 name: 'startApplication',
                 message: 'What would you like to do?',
-                choices: ['View All Employees', 'Add Employee', 'View All Roles', 'Update Employee Role', 'Add Role', 'View All Departments', 'Add Department', 'Quit']
+                choices: ['View All Employees', 'View All Employees By Department', 'View All Employees By Manager', 'Add Employee', 'Update Employee Role', 'View All Roles', 'Add Role', 'View All Departments', 'Add Department', 'View Utilized Budget', 'Quit']
             }
         ])
         .then((choices) => {
             switch (choices['startApplication']) {
                 case 'View All Employees':
-                    viewAllEmployee();
+                    viewAllEmp();
+                    break;
+                case 'View All Employees By Department':
+                    viewEmpByDep();
+                    break;
+                case 'View All Employees By Manager':
+                    viewEmpByManager();
                     break;
                 case 'Add Employee':
-                    addEmployee();
-                    break;
-                case 'View All Roles':
-                    viewAllRoles();
+                    addEmp();
                     break;
                 case 'Update Employee Role':
-                    updateEmployeeRole()
+                    updateEmp();
+                    break;
+                case 'View All Roles':
+                    viewRoles();
                     break;
                 case 'Add Role':
-                    addRole()
+                    addRole();
                     break; 
                 case 'View All Departments':
-                    viewAllDepartments()
+                    viewDep();
                     break;
                 case 'Add Department':
-                    addDepartment()
+                    addDep();
+                    break;
+                case 'View Total Utilized Budget':
+                    addTotalByDep();
                     break;
                 case 'Quit':
-                    quit()
+                    quit();
                     break;
             }
         })
@@ -43,6 +53,10 @@ const promptUser = () => {
         })
 };
 
-module.exports = {promptUser}
+module.exports = { promptUser };
+const { viewAllEmp, viewEmpByDep, viewEmpByManager, addEmp, updateEmp } = require('./models/Employee');
+const { viewDep, addDep } = require('./models/Department');
+const { viewRoles, addRole } = require('./models/Roles');
+const { addTotalByDep } = require('./models/Budget');
 
-promptUser()
+promptUser();
