@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 
-
 const promptUser = () => {
     inquirer
         .prompt([
@@ -11,8 +10,8 @@ const promptUser = () => {
                 choices: ['View All Employees', 'View All Employees By Department', 'View All Employees By Manager', 'Add Employee', 'Update Employee Role', 'View All Roles', 'Add Role', 'View All Departments', 'Add Department', 'View Utilized Budget', 'Quit']
             }
         ])
-        .then((choices) => {
-            switch (choices['startApplication']) {
+        .then((data) => {
+            switch (data['startApplication']) {
                 case 'View All Employees':
                     viewAllEmp();
                     break;
