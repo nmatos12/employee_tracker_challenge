@@ -1,5 +1,17 @@
 const inquirer = require('inquirer');
+// const figlet = require('figlet');
+// const gradient = require('gradient-string');
 
+// const msg = () => {
+//     figlet(`Employee Manager`, function (err, data) {
+//     if (err) {
+//       console.log("Something went wrong...");
+//       console.dir(err);
+//       return;
+//     }
+//     console.log(gradient.pastel.multiline(data));
+// });
+// };
 
 const promptUser = () => {
     inquirer
@@ -52,4 +64,5 @@ const { viewAllEmp, viewEmpByDep, viewEmpByManager, addEmp, updateEmp } = requir
 const { viewDep, addDep } = require('./models/Department');
 const { viewRoles, addRole } = require('./models/Roles');
 
+// msg();
 promptUser();
