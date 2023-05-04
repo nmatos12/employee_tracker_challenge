@@ -15,7 +15,6 @@ const dropManager = () => {
             if(error) {
                 console.log(error.message);
             }
-            console.log('Manager table deleted')
         }
     )
 };
@@ -33,7 +32,6 @@ const createManagerTable = () => {
             if (error) {
                 console.log(error.message);
             }
-            console.log('Created manager table')
         }
     )
 };
@@ -50,7 +48,6 @@ const addManagers = () => {
             if (error) {
                 console.log(error.message);
             }
-            console.log('Added manager')
         }
     )
 };

@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 // View Roles //
 const viewRoles = () => {
     connection.query(
-        `SELECT roles.id, roles,title, roles.salary, department.name
+        `SELECT roles.id, roles.title, roles.salary, department.name
             FROM roles
             LEFT JOIN department
             ON roles.department_id = department.id`,
@@ -24,7 +24,7 @@ const viewRoles = () => {
             console.table(results);
             promptUser();
         }
-    )
+    );
 };
 
 // Add Role //
@@ -74,9 +74,9 @@ const addRole = () => {
                                 console.log(error.message);
                                 return;
                             }
-                            console.log('New role added')
+                            console.log('New role added');
+                            promptUser();
                         }
-                        
                     );
                 });
         }

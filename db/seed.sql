@@ -1,10 +1,3 @@
--- MANAGERS --
-INSERT INTO manager (first_name, last_name)
-    SELECT first_name, last_name 
-    FROM employee
-    WHERE manager_confirm = 1
-;
-
 -- DEPARTMENTS --
 INSERT INTO department (name) VALUES
     ('Legal'),
@@ -38,3 +31,11 @@ INSERT INTO employee (
     ('Gracie', 'Greyson', 5, null, true),
     ('Molly', 'Croft', 6, 3, false)
 ;
+
+-- MANAGERS --
+INSERT INTO manager (first_name, last_name)
+    SELECT first_name, last_name 
+    FROM employee
+    WHERE manager_confirm = 1
+;
+
