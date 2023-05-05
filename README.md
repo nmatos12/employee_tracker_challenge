@@ -56,9 +56,9 @@ JavaScript, Markdown, and MYSQL
 
 Links below provide a functionality of webpage.
 
-[Screencastify Demo](https://watch.screencastify.com/)
+[Screencastify Demo](https://watch.screencastify.com/v/1zI0vSFw7b0afboLrh02)
 
-[MP4 Download Demo](Develop/assets/videos/)
+[MP4 Download Demo](assets/videos/Employee%20Manager%20Demo.mp4)
 
 ![Image showing functionality of the Employee Manager](assets/images/Employee_Manager.png)
 ![Image showing functionality of the Employee Manager](assets/images/Employee_Manager2.png)
